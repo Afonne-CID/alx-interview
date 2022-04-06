@@ -31,7 +31,6 @@ def pascal_triangle(n):
                 to_append.append(tmp_list[length - tmp_length]
                                  + tmp_list[(length - tmp_length) + 1])
             tmp_length -= 1
-        print("The value of to_append = {}".format(to_append))
         to_append.append(1)
         to_append.insert(0, 1)
         my_list.append(to_append)
