@@ -7,9 +7,6 @@
 def pascal_triangle(n):
     """ Returns a list of lists of integers representing the
         Pascal's triangle of `n`
-
-        Args:
-            n (int): An integer to be represented in the pascal's triangle
     """
     if (n <= 0):
         return []
@@ -23,13 +20,12 @@ def pascal_triangle(n):
     while ((n - 2) > 0):
         length = len(my_list[-1]) - 1
         tmp_length = length
-        tmp_list = my_list[-1]
         to_append = []
 
         while (tmp_length > 0):
-            if (tmp_list[(length - tmp_length) + 1]):
-                to_append.append(tmp_list[length - tmp_length]
-                                 + tmp_list[(length - tmp_length) + 1])
+            if (my_list[-1][(length - tmp_length) + 1]):
+                to_append.append(my_list[-1][length - tmp_length]
+                                 + my_list[-1][(length - tmp_length) + 1])
             tmp_length -= 1
         to_append.append(1)
         to_append.insert(0, 1)
