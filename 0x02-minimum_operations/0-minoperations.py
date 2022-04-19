@@ -5,7 +5,7 @@
 
 def minOperations(n: int) -> int:
     '''Calculates the fewest number of operations needed to result
-        in exactly `n` `H` characters in a file that has only a singe `H` 
+        in exactly `n` `H` characters in a file that has only a singe `H`
         character
     '''
     if (not n or n <= 1):
