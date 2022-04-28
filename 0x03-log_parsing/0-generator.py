@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''Generates random HTTP request logs.
+'''
 import random
 import sys
 from time import sleep
