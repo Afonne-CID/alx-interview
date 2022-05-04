@@ -10,8 +10,8 @@ def validUTF8(data: list) -> bool:
     cnt = 0
     for num in data:
         if type(num) == int:
+            base = 128
             if not cnt:
-                base = 128
                 while base & num:
                     cnt += 1
                     base >>= 1
