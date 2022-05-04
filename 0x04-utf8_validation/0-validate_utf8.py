@@ -22,6 +22,5 @@ def validUTF8(data: list) -> bool:
             else:
                 if num >> 6 != 0b10:
                     return False
-        else:
-            return False
+            cnt -= 1
     return cnt == 0
