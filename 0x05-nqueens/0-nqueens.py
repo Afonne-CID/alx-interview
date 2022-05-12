@@ -21,8 +21,7 @@ if __name__ == '__main__':
     col = set()
     posDiag = set()
     negDiag = set()
-    board = [[0 * n] for _ in n]
-
+    board = [[0 for _ in range(n)] for _ in range(n)]
 
     def solveNQueens(r):
         if r == n:
@@ -44,12 +43,13 @@ if __name__ == '__main__':
             posDiag.remove(r + c)
             negDiag.remove(r - c)
             board[r][c] = 0
+
     def printNQueens(res):
         output = []
         for i in range(n):
             for j in range(n):
                 if res[i][j] == 1:
-                    output.append([j, i])
+                    output.append([i, j])
         print(output)
         output.clear()
     solveNQueens(0)
